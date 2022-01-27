@@ -3,7 +3,7 @@ name: GitHub Actions Workflow with NPM cache
 on: [pull_request]
 
 jobs:
-  build:
+  npm_cached:
 
     runs-on: ubuntu-latest
 
