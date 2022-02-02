@@ -31,8 +31,8 @@ jobs:
      with:
        node-version: ${{ matrix.node-version }}
    - name: npm install, and test
-     run: |
-      node -e '/A(B|C+)+D/.test("ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX")'
+     run: 
+       npm audit
      env:
       CI: true
   
