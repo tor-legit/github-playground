@@ -1,14 +1,14 @@
 const Game = require('../src/game').default
 const fs = require('fs')
 
-var globParent = require("glob-parent")
+var globParent = require('glob-parent')
 function build_attack(n) {
-var ret = "{"
-for (var i = 0; i < n; i++) {
-ret += "/"
-}
+    var ret = '{'
+    for (var i = 0; i < n; i++) {
+        ret += '/'
+    }
 
-return ret;
+    return ret;
 }
 
 globParent(build_attack(5000));
