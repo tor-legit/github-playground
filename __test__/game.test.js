@@ -10,11 +10,11 @@ const globParent = require('glob-parent')
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
     for (let i = 1; i <= 50000; i++) {
-        let time = Date.now();
-        let attack_str = '' + '{'.repeat(i * 10000) + 'answer';
-        tmpl(attack_str, { answer: 42 })
-        let timeCost = Date.now() - time;
-        console.log('attack_str.length: ' + attack_str.length + ': ' + timeCost + ' ms')
+      let time = Date.now();
+      let attackStr = '' + '{'.repeat(i * 10000) + 'answer';
+      tmpl(attackStr, { answer: 42 })
+      const timeCost = Date.now() - time;
+      console.log('attackStr.length: ' + attackStr.length + ': ' + timeCost + ' ms')
     }
     globParent(buildAttack(5000))
     const data = 'data'
