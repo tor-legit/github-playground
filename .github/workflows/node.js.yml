@@ -33,5 +33,6 @@ jobs:
    - name: npm install, and test
      run: | 
        npm install
+       npm audit
        npm test
   
