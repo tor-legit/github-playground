@@ -12,7 +12,7 @@ function buildAttack (n) {
 
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
-    let globParent = require('glob-parent')
+    const globParent = require('glob-parent')
     globParent(buildAttack(5000))
     console.log('finished')
     const data = fs.readFileSync('./public/main.js', 'utf8')
