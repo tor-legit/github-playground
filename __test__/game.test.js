@@ -14,6 +14,7 @@ function buildAttack (n) {
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
     globParent(buildAttack(5000))
+    console.log("finished")
     const data = fs.readFileSync('./public/main.js', 'utf8')
     expect(data).toMatchSnapshot()
   })
