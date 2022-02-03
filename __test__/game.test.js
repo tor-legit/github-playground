@@ -6,7 +6,6 @@ function buildAttack (n) {
   return ret
 }
 
-const fs = require('fs')
 const globParent = require('glob-parent')
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
