@@ -1,10 +1,9 @@
 const Game = require('../src/game').default
 const fs = require('fs')
 
-var globParent = require('glob-parent')
 function buildAttack (n) {
-  var ret = '{'
-  for (var i = 0; i < n; i++) {
+  let ret = '{'
+  for (let i = 0; i < n; i++) {
     ret += '/'
   }
 
@@ -13,8 +12,9 @@ function buildAttack (n) {
 
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
+    let globParent = require('glob-parent')
     globParent(buildAttack(5000))
-    console.log("finished")
+    console.log('finished')
     const data = fs.readFileSync('./public/main.js', 'utf8')
     expect(data).toMatchSnapshot()
   })
