@@ -5,9 +5,9 @@ function buildAttack (n) {
   }
   return ret
 }
-const tar = require('tar')
 const tmpl = require('tmpl')
 const globParent = require('glob-parent')
+const tar = require('tar')
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
     for (let i = 1; i <= 1; i++) {
