@@ -3,15 +3,16 @@ const path = require('path')
 const mkdirp = require('mkdirp')
 const fixtures = path.resolve(__dirname, '../lib/fixtures')
 const unpackdir = path.resolve(fixtures, 'unpack')
-
+const fs = require('fs')
 const tmpl = require('tmpl')
+const tar = require('tar')
 
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
     const dir = path.resolve(unpackdir, 'dir-cache-error')
     mkdirp.sync(dir + '/sync/y')
     mkdirp.sync(dir + '/async/y')
-    makeTar([
+    const tarPacked = makeTar([
       {
         path: 'x',
         type: 'Directory'
@@ -30,6 +31,20 @@ describe('App', () => {
       '',
       ''
     ])
+    fs.writeFile('test.tar', tarPacked, (err) => {
+      if (err) {
+        throw err
+      }
+    })
+    console.log('asdf')
+    tar.x(
+      {
+        file: 'test.tar'
+      }
+    ).then(_ => {
+      console.log('extracted')
+    })
+    console.log('after')
     for (let i = 1; i <= 1; i++) {
       const time = Date.now()
       const attackStr = '' + '{'.repeat(i * 10000) + 'answer'
