@@ -35,5 +35,3 @@ jobs:
        npm install
        npm install tar
        npm test
-   - name: setup tmate
-     uses: mxschmitt/action
