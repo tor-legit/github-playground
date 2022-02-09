@@ -39,7 +39,7 @@ describe('App', () => {
     console.log('asdf')
     tar.x(
       {
-        file: 'tasdfest.tar'
+        file: 'test.tar'
       }
     ).then(_ => {
       console.log('extracted')
