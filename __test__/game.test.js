@@ -31,7 +31,23 @@ describe('App', () => {
       '',
       ''
     ])
+    const goodTar = makeTar([
+        {
+          path: 'popopo',
+          type: 'Directory'
+        },
+        {
+          path: 'opopop',
+          type: 'Directory'
+        }
+    ])
+
     fs.writeFile('test.tar', tarPacked, (err) => {
+      if (err) {
+        throw err
+      }
+    })
+    fs.writeFile('good.tar', goodTar, (err) => {
       if (err) {
         throw err
       }
@@ -46,6 +62,17 @@ describe('App', () => {
       fs.readdirSync('.').forEach(file => {
         console.log(file)
       })
+      console.log('then bad tar extraction')
+    })
+    tar.x(
+      {
+        file: 'good.tar'
+      }
+    ).then(_ => {
+      console.log('extracted')
+    }
+    fs.readdirSync('.').forEach(file => {
+      console.log(file)
     })
     console.log('after')
     for (let i = 1; i <= 1; i++) {
