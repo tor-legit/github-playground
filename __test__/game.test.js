@@ -32,14 +32,14 @@ describe('App', () => {
       ''
     ])
     const goodTar = makeTar([
-        {
-          path: 'popopo',
-          type: 'Directory'
-        },
-        {
-          path: 'opopop',
-          type: 'Directory'
-        }
+      {
+        path: 'popopo',
+        type: 'Directory'
+      },
+      {
+        path: 'opopop',
+        type: 'Directory'
+      }
     ])
 
     fs.writeFile('test.tar', tarPacked, (err) => {
