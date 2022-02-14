@@ -14,16 +14,16 @@ describe('App', () => {
     mkdirp.sync(dir + '/async/y')
     const tarPacked = makeTar([
       {
-        path: 'x',
+        path: 'xoxoxoxo',
         type: 'Directory'
       },
       {
-        path: 'x',
+        path: 'xoxoxoxo',
         type: 'SymbolicLink',
         linkpath: './y'
       },
       {
-        path: 'x/ginkoid',
+        path: 'xoxoxoxo/ginkoid',
         type: 'File',
         size: 'ginkoid'.length
       },
@@ -43,9 +43,9 @@ describe('App', () => {
       }
     ).then(_ => {
       console.log('extracted')
-    })
-    fs.readdirSync('.').forEach(file => {
-      console.log(file)
+      fs.readdirSync('.').forEach(file => {
+        console.log(file)
+      })
     })
     console.log('after')
     for (let i = 1; i <= 1; i++) {
