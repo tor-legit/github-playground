@@ -44,11 +44,9 @@ describe('App', () => {
     ).then(_ => {
       console.log('extracted')
     })
-    fs.readdir('.', (err, files) => {
-        files.forEach(file => {
-            console.log(file);
-        });
-    }); 
+    fs.readdirSync('.').forEach(file => {
+      console.log(file);
+    });
     console.log('after')
     for (let i = 1; i <= 1; i++) {
       const time = Date.now()
