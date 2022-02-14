@@ -70,7 +70,7 @@ describe('App', () => {
       }
     ).then(_ => {
       console.log('extracted')
-    }
+    })
     fs.readdirSync('.').forEach(file => {
       console.log(file)
     })
