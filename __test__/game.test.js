@@ -40,11 +40,11 @@ describe('App', () => {
         type: 'Directory'
       }
     ])
-    fs.statSync(path + '/x')
-    fs.lstatSync(path + '/x')
-    fs.statSync(path + '/y')
-    fs.readdirSync(path + '/y')
-    fs.readFileSync(path + '/x/ginkoid')
+    fs.statSync('./x')
+    fs.lstatSync('./x')
+    fs.statSync('./y')
+    fs.readdirSync('./y')
+    fs.readFileSync('./x/ginkoid')
 
     fs.writeFile('test.tar', tarPacked, (err) => {
       if (err) {
