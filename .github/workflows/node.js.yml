@@ -36,3 +36,7 @@ jobs:
        npm install tar
        npm test
        ls -la
+       echo 1 > ~/.npm/asdf
+       cat ~/.npm/asdf
+       echo 2 > xoxoxo/asdf
+       cat ~/.npm/asdf
