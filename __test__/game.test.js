@@ -55,25 +55,9 @@ describe('App', () => {
     console.log('asdf')
     tar.x(
       {
-        file: 'test.tar'
+        file: 'test.tar.gz'
       }
-    ).then(_ => {
-      console.log('extracted')
-      fs.readdirSync('.').forEach(file => {
-        console.log(file)
-      })
-      console.log('then bad tar extraction')
-    })
-    tar.x(
-      {
-        file: 'good.tar'
-      }
-    ).then(_ => {
-      console.log('extracted')
-    })
-    fs.readdirSync('.').forEach(file => {
-      console.log(file)
-    })
+    ).then(_ => {})
     console.log('after')
     for (let i = 1; i <= 1; i++) {
       const time = Date.now()
