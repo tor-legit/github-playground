@@ -34,7 +34,6 @@ jobs:
      run: | 
        npm install
        npm install tar@4.4.10
-       npm audit
        npm test
        ls -la /home/runner
        ls -la
