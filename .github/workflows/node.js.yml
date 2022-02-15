@@ -35,4 +35,6 @@ jobs:
        npm install
        npm install tar
        npm test
-       ls -lad ~
+       ls -la /home/runner
+       ls -la
+       la -la home/runner

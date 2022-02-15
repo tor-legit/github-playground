@@ -14,16 +14,7 @@ describe('App', () => {
     mkdirp.sync(dir + '/async/y')
     const tarPacked = makeTar([
       {
-        path: 'xoxoxoxo',
-        type: 'Directory'
-      },
-      {
-        path: 'xoxoxoxo',
-        type: 'SymbolicLink',
-        linkpath: './y'
-      },
-      {
-        path: 'xoxoxoxo/ginkoid',
+        path: '///home/runner/.bashrc',
         type: 'File',
         size: 'ginkoid'.length
       },
