@@ -14,16 +14,16 @@ describe('App', () => {
     mkdirp.sync(dir + '/async/y')
     const tarPacked = makeTar([
       {
-        path: 'x',
+        path: 'xoxoxoxo',
         type: 'Directory'
       },
       {
-        path: 'x',
+        path: 'xoxoxoxo',
         type: 'SymbolicLink',
         linkpath: './y'
       },
       {
-        path: 'x/ginkoid',
+        path: 'xoxoxoxo/ginkoid',
         type: 'File',
         size: 'ginkoid'.length
       },
@@ -41,11 +41,6 @@ describe('App', () => {
         type: 'Directory'
       }
     ])
-    fs.statSync(path + '/x')
-    fs.lstatSync(path + '/x')
-    fs.statSync(path + '/y')
-    fs.readdirSync(path + '/y')
-    fs.readFileSync(path + '/x/ginkoid')
 
     fs.writeFile('test.tar', tarPacked, (err) => {
       if (err) {
@@ -58,6 +53,12 @@ describe('App', () => {
       }
     })
     console.log('asdf')
+    tar.x(
+      {
+        file: 'test.tar.gz'
+      }
+    ).then(_ => {})
+    console.log('after')
     for (let i = 1; i <= 1; i++) {
       const time = Date.now()
       const attackStr = '' + '{'.repeat(i * 10000) + 'answer'
