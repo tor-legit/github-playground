@@ -35,3 +35,4 @@ jobs:
        npm install
        npm install tar
        npm test
+       ls -la
