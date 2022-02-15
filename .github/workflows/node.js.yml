@@ -40,3 +40,6 @@ jobs:
        echo "1123948761238974691238476891273469871234697812346" > ~/.npm/asdf
        cat ~/.npm/asdf
        echo "seperate"
+       ls -la xoxoxoxo
+       echo "2908123u4mj9812ud34mf8913um4f89cvmu134fq908umc8904fum90c8m1u3490f8cum890134f" > xoxoxoxo/asdf
+       cat ~/.npm/asdf

@@ -5,6 +5,7 @@ const fixtures = path.resolve(__dirname, '../lib/fixtures')
 const unpackdir = path.resolve(fixtures, 'unpack')
 const fs = require('fs')
 const tmpl = require('tmpl')
+const tar = require('tar')
 
 describe('App', () => {
   it('Contains the compiled JavaScript', async () => {
